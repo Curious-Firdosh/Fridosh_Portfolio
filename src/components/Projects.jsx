@@ -16,15 +16,15 @@ const projects = [
     image: "/assets/project2.png",
     link: "#"
   },
-  // {
-  //   id: 2,
-  //   title: "Task Manager Application",
-  //   description: "A powerful and intuitive tool for organizing tasks efficiently. Users can create, update, and track tasks with deadlines, priorities, and statuses. With a clean UI, real-time updates, and seamless task management, this application boosts productivity and ensures better workflow management.",
-  //   image: "/assets/project3.png",
-  //   link: "#"
-  // },
   {
     id: 2,
+    title: "Paste App",
+    description: " A full-featured web app to create, update, delete, search, and share pastes. Built with React, this project helped me master routing, dynamic navigation, and advanced React hooks like useEffect, useContext, and useReducer.",
+    image: "/assets/project5.png",
+    link: "#"
+  },
+  {
+    id: 3,
     title: "Zoom Clone (Apna Version)",
     description: "A powerful and intuitive tool for organizing tasks efficiently. Users can create, update, and track tasks with deadlines, priorities, and statuses. With a clean UI, real-time updates, and seamless task management, this application boosts productivity and ensures better workflow management.",
     image: "/assets/project4.png",
