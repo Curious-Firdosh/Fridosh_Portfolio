@@ -63,8 +63,8 @@ export default function Navbar() {
 
         
         <motion.a
-          href="/assets/FirdoshKhan.pdf"
-          download= 'FirdoshKhan.pdf'
+          href="/assets/resume.pdf"
+          download= 'resume.pdf'
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
         >
           <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -113,13 +113,8 @@ export default function Navbar() {
                 </motion.li>
               ))}
               <motion.a
-<<<<<<< HEAD
-                href="/assets/FirdoshKhan.pdf"
-                download= 'FirdoshKhan.pdf'
-=======
                 href="/assets/resume.pdf"
                 download= 'resume.pdf'
->>>>>>> a8ea029677b661a36d8e38bd17461a085522b444
                 className="relative inline-block px-4 py-2 font-semibold group"
                 whileHover={{ scale: 1.1 }}
               >
