@@ -114,7 +114,8 @@ export default function Navbar() {
               ))}
               <motion.a
                 href="/assets/resume.pdf"
-                download= 'resume.pdf'
+                 target="_blank"
+                 rel="noopener noreferrer"
                 className="relative inline-block px-4 py-2 font-semibold group"
                 whileHover={{ scale: 1.1 }}
               >
