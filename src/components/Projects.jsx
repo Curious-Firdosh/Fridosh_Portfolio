@@ -18,10 +18,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Paste App",
+    title: "NotesVaaault",
     description: " A full-featured web app to create, update, delete, search, and share pastes. Built with React, this project helped me master routing, dynamic navigation, and advanced React hooks like useEffect, useContext, and useReducer.",
     image: "/assets/project5.png",
-    link: "#"
+    link: "https://notesvaault.netlify.app/"
   },
   {
     id: 3,
