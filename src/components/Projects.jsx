@@ -25,8 +25,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "Zoom Clone (Apna Version)",
-    description: "A powerful and intuitive tool for organizing tasks efficiently. Users can create, update, and track tasks with deadlines, priorities, and statuses. With a clean UI, real-time updates, and seamless task management, this application boosts productivity and ensures better workflow management.",
+    title: "MovieFliz",
+    description: "MovieFliz is a movie database web application built using React and Redux. It fetches real-time data from external APIs to display detailed movie information. With a Netflix-style interface, users can explore trending, popular, and top-rated movies, watch trailers, and enjoy a smooth, responsive browsing experience across all devices.",
     image: "/assets/project4.png",
     link: "#"
   },
