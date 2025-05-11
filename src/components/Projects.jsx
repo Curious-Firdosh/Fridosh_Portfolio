@@ -11,10 +11,10 @@ import { RiNextjsFill,RiTailwindCssFill } from "react-icons/ri";
 const projects = [
   {
     id: 1,
-    title: "StudyNotion E-Learning Platform",
+    title: "StudyNotion E-Learning Platform [Working On That]",
     description: " A dynamic and feature-rich platform for seamless online learning. Instructors can create and manage courses, while students can securely purchase and track their progress in real-time. With interactive learning experiences and performance analytics, StudyNotion ensures an engaging and efficient education journey.",
     image: "/assets/project2.png",
-    link: "#"
+    link: "https://github.com/Curious-Firdosh/StudyNotion.git"
   },
   {
     id: 2,
@@ -25,10 +25,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "MovieFliz",
-    description: "MovieFliz is a movie database web application built using React and Redux. It fetches real-time data from external APIs to display detailed movie information. With a Netflix-style interface, users can explore trending, popular, and top-rated movies, watch trailers, and enjoy a smooth, responsive browsing experience across all devices.",
-    image: "/assets/project4.png",
-    link: "#"
+    title: "Blog App",
+    description: "BlogTopic App is a simple React app where users can explore blogs by topics. I’ve added clickable tags like #artificialintelligence, #frontend, etc. — and when the user clicks on a tag, they go to a page that shows only the blogs related to that topic.Also, I added pagination, so if there are many blogs under one topic, the user can go to next pages to read more.",
+    image: "/assets/project6.png",
+    link: "https://blog-context-app-sigma.vercel.app/"
   },
   // {
   //   id: 4,
