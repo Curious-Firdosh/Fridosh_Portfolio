@@ -11,24 +11,32 @@ import { RiNextjsFill,RiTailwindCssFill } from "react-icons/ri";
 const projects = [
   {
     id: 1,
-    title: "StudyNotion E-Learning Platform",
+    title: "StudyNotion E-Learning Platform [Working On That]",
     description: " A dynamic and feature-rich platform for seamless online learning. Instructors can create and manage courses, while students can securely purchase and track their progress in real-time. With interactive learning experiences and performance analytics, StudyNotion ensures an engaging and efficient education journey.",
     image: "/assets/project2.png",
+<<<<<<< HEAD
     link: "https://studynotion-frontend.vercel.app/"
+=======
+    link: "https://github.com/Curious-Firdosh/StudyNotion.git"
+>>>>>>> ad9d891a8b7b4284ec3a2f75d6e186c4a0447f6a
   },
   {
     id: 2,
-    title: "Paste App",
+    title: "NotesVaaault",
     description: " A full-featured web app to create, update, delete, search, and share pastes. Built with React, this project helped me master routing, dynamic navigation, and advanced React hooks like useEffect, useContext, and useReducer.",
     image: "/assets/project5.png",
+<<<<<<< HEAD
     link: "http://notesvaault.netlify.app/"
+=======
+    link: "https://notesvaault.netlify.app/"
+>>>>>>> ad9d891a8b7b4284ec3a2f75d6e186c4a0447f6a
   },
   {
     id: 3,
-    title: "Zoom Clone (Apna Version)",
-    description: "A powerful and intuitive tool for organizing tasks efficiently. Users can create, update, and track tasks with deadlines, priorities, and statuses. With a clean UI, real-time updates, and seamless task management, this application boosts productivity and ensures better workflow management.",
-    image: "/assets/project4.png",
-    link: "#"
+    title: "Blog App",
+    description: "BlogTopic App is a simple React app where users can explore blogs by topics. I’ve added clickable tags like #artificialintelligence, #frontend, etc. — and when the user clicks on a tag, they go to a page that shows only the blogs related to that topic.Also, I added pagination, so if there are many blogs under one topic, the user can go to next pages to read more.",
+    image: "/assets/project6.png",
+    link: "https://blog-context-app-sigma.vercel.app/"
   },
   // {
   //   id: 4,
