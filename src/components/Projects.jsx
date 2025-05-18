@@ -14,22 +14,14 @@ const projects = [
     title: "StudyNotion E-Learning Platform [Working On That]",
     description: " A dynamic and feature-rich platform for seamless online learning. Instructors can create and manage courses, while students can securely purchase and track their progress in real-time. With interactive learning experiences and performance analytics, StudyNotion ensures an engaging and efficient education journey.",
     image: "/assets/project2.png",
-<<<<<<< HEAD
     link: "https://studynotion-frontend.vercel.app/"
-=======
-    link: "https://github.com/Curious-Firdosh/StudyNotion.git"
->>>>>>> ad9d891a8b7b4284ec3a2f75d6e186c4a0447f6a
   },
   {
     id: 2,
     title: "NotesVaaault",
     description: " A full-featured web app to create, update, delete, search, and share pastes. Built with React, this project helped me master routing, dynamic navigation, and advanced React hooks like useEffect, useContext, and useReducer.",
     image: "/assets/project5.png",
-<<<<<<< HEAD
     link: "http://notesvaault.netlify.app/"
-=======
-    link: "https://notesvaault.netlify.app/"
->>>>>>> ad9d891a8b7b4284ec3a2f75d6e186c4a0447f6a
   },
   {
     id: 3,
