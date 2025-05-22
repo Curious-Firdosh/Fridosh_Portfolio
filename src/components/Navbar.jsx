@@ -63,7 +63,7 @@ export default function Navbar() {
 
         
         <motion.a
-          href="/assets/resume2.pdf"
+          href="/assets/resume21.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
@@ -114,7 +114,7 @@ export default function Navbar() {
                 </motion.li>
               ))}
               <motion.a
-                href="/assets/resume2.pdf"
+                href="/assets/resume21.pdf"
                  target="_blank"
                  rel="noopener noreferrer"
                 className="relative inline-block px-4 py-2 font-semibold group"
