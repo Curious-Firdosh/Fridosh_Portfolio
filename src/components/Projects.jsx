@@ -1,12 +1,11 @@
-import React from 'react';
+
 import { TbExternalLink } from "react-icons/tb";
-import { TbBrandRedux } from "react-icons/tb";
 
 import { motion } from 'framer-motion';
 import { FaJs, FaReact, FaNodeJs,  FaDatabase } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress } from "react-icons/si";
-import { CgFigma } from "react-icons/cg";
-import { RiNextjsFill,RiTailwindCssFill } from "react-icons/ri";
+
 
 const projects = [
   {
@@ -30,13 +29,13 @@ const projects = [
     image: "/assets/project6.png",
     link: "https://blog-context-app-sigma.vercel.app/"
   },
-  // {
-  //   id: 4,
-  //   title: "Linkdin Clone",
-  //   description: "A powerful and intuitive tool for organizing tasks efficiently. Users can create, update, and track tasks with deadlines, priorities, and statuses. With a clean UI, real-time updates, and seamless task management, this application boosts productivity and ensures better workflow management.",
-  //   image: "/assets/project3.png",
-  //   link: "#"
-  // }
+  {
+    id: 4,
+    title: "QuickPay",
+    description: "A payment application that enables users to securely log in and log out, send money to people in their contacts, and view a complete history of their transactions. It provides a smooth and intuitive interface for managing payments, ensuring users can handle transfers and track activity efficiently within a clean and user-friendly experience.",
+    image: "/assets/project9.png",
+    link: "https://quiickkpay.netlify.app/"
+  }
 ];
 
  const skills = [
@@ -46,8 +45,7 @@ const projects = [
     { id: 4, name: "MongoDB", icon: <FaDatabase size={50} /> },
     { id: 5, name: "Express Js", icon: <SiExpress size={50} /> },
     { id: 6, name: "Tailwind", icon: <RiTailwindCssFill size={50} /> },
-    { id: 7, name: "Figma", icon: <CgFigma size={50} /> },
-    { id: 8, name: "Redux", icon: <TbBrandRedux size={50}/>},
+   
   ];
 
 export default function Projects() {

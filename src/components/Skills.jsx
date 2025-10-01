@@ -1,48 +1,57 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { TbBrandFirebase } from "react-icons/tb";
+
 import { FaJs, FaReact, FaNodeJs,  FaDatabase } from "react-icons/fa";
-import { TbBrandTypescript } from "react-icons/tb";
+
 import { RiNextjsFill,RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiTypescript } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandRedux } from "react-icons/tb";
+import { SiDocker,SiHono,SiMongoose} from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiPrisma } from "react-icons/si";
 
 export default function Skills() {
   const [skills] = useState([
     { id: 1, name: "JavaScript", icon: <FaJs size={50} /> },
     { id: 2, name: "React", icon: <FaReact size={50} /> },
     { id: 3, name: "Node.js", icon: <FaNodeJs size={50} /> },
-    { id: 4, name: "Redux", icon: <TbBrandRedux size={50}/>},
-    { id: 5, name: "MongoDB", icon: <FaDatabase size={50} /> },
-    // { id: 6, name: "Firebase", icon: <TbBrandFirebase size={50} /> },
-    { id: 7, name: "Express Js", icon: <SiExpress size={50} /> },
-    // { id: 8, name: "Next.js", icon: <RiNextjsFill size={50} /> },
-    { id: 9, name: "Tailwind", icon: <RiTailwindCssFill size={50} /> },
-    // { id: 10, name: "Figma", icon: <CgFigma size={50} /> },
-    // { id: 11, name: "TypeScript", icon: <TbBrandTypescript size={50} /> },
+    { id: 4, name: "MongoDB", icon: <FaDatabase size={50} /> },
+    { id: 5, name: "Express Js", icon: <SiExpress size={50} /> },
+    { id: 6, name: "Tailwind", icon: <RiTailwindCssFill size={50} /> },
+    { id: 7, name: "Figma", icon: <CgFigma size={50} /> },
+    { id: 8, name: "Redux", icon: <TbBrandRedux size={50}/>},
+    { id: 9, name: "Postgres Sql", icon: <BiLogoPostgresql size={50}/>},
+    { id: 10, name: "Prisma", icon: <SiPrisma  size={50}/>},
+    { id: 11, name: "Mongoose", icon: <SiMongoose size={50}/>},
+    { id: 12, name: "Hono", icon: <SiHono size={50}/>},
+    { id: 13, name: "Mongoose", icon: <SiMongoose size={50}/>},
+    { id: 14, name: "Docker", icon: <SiDocker size={50}/>},
+    { id: 15, name: "Next js", icon: <RiNextjsFill size={50}/>},
+    { id: 16, name: "TypeScript", icon: <SiTypescript size={50}/>},
+
   ]);
 
-  const [experiences] = useState([
-    {
-      id: 1,
-      company: "Google",
-      role: "Lead Software Engineer",
-      period: "Nov 2019 - Present",
-      description:
-        "Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience.",
-      logo: "/assets/google.svg",
-    },
-    {
-      id: 2,
-      company: "Youtube",
-      role: "Software Engineer",
-      period: "Jan 2017 - Oct 2019",
-      description:
-        "At Youtube, I served as a  Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.",
-      logo: "/assets/youtube.svg",
-    },
-  ]);
+  // const [experiences] = useState([
+  //   {
+  //     id: 1,
+  //     company: "Google",
+  //     role: "Lead Software Engineer",
+  //     period: "Nov 2019 - Present",
+  //     description:
+  //       "Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience.",
+  //     logo: "/assets/google.svg",
+  //   },
+  //   {
+  //     id: 2,
+  //     company: "Youtube",
+  //     role: "Software Engineer",
+  //     period: "Jan 2017 - Oct 2019",
+  //     description:
+  //       "At Youtube, I served as a  Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.",
+  //     logo: "/assets/youtube.svg",
+  //   },
+  // ]);
 
   return (
     <div className="mt-3 lg:mt-16" id="skills">
