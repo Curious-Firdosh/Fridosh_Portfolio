@@ -25,17 +25,22 @@ export default function About() {
           About <span className="font-extrabold">Me</span>
         </h2>
 
-        <p className="text-[#71717A] text-sm/6 lg:text-base mt-5 lg:mt-10">
-          I'm a passionate full-stack developer specializing in **React.js & Node.js**. I thrive on blending technical expertise with sleek UI/UX design to build high-performing, user-friendly applications.
+       <p className="text-[#71717A] text-sm/6 lg:text-base mt-5 lg:mt-10">
+          I am a full stack developer focused on building real, production-ready web applications. I primarily work with React and Node.js and care deeply about clean architecture, performance, and creating reliable user experiences.
         </p>
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
-          My web development journey started in **2023**, and since then, I've continuously evolved, taking on new challenges and keeping up with the latest technologies. Today, I build **cutting-edge web applications** using **Next.js, TypeScript, NestJS, TailwindCSS, Supabase, and more**.
+          I started my development journey in 2023 and have grown by building complete products from scratch, including real-time platforms and scalable web systems using tools like Next.js, TypeScript, NestJS, Tailwind CSS, and modern databases.
         </p>
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
-          Beyond coding, I enjoy sharing insights on **Twitter**, and following the journey of **early-stage startups**. Feel free to follow me on **Twitter** or check out my projects on **GitHub**.
+          I have hands-on experience designing REST APIs, implementing authentication and role-based access, and deploying applications to production environments.
         </p>
+
+        <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
+          I take ownership of what I build, learn quickly, and enjoy solving real-world problems. I follow early-stage startups to understand how products are built and share my work and learnings through GitHub and Twitter.
+        </p>
+
       </motion.div>
     </div>
   );

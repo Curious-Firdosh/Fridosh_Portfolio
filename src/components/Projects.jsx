@@ -8,36 +8,48 @@ import { SiExpress } from "react-icons/si";
 
 
 const projects = [
-  {
+   {
     id: 1,
-    title: "StudyNotion E-Learning Platform [Working On That]",
-    description: " A dynamic and feature-rich platform for seamless online learning. Instructors can create and manage courses, while students can securely purchase and track their progress in real-time. With interactive learning experiences and performance analytics, StudyNotion ensures an engaging and efficient education journey.",
+    title: "Interviewlyy – Real-World Interview Practice Platform",
+    description:
+      "A full-stack interview practice platform designed to simulate real technical interviews. Supports live coding sessions, problem solving, real-time communication, and interview-style workflows. Built with a focus on production-level architecture, scalability, and real-world engineering practices rather than tutorial demos.",
+    image: "/assets/Dashboard.png",
+    link: "https://interviewlyyy.up.railway.app/"
+  },
+  {
+    id: 2,
+    title: "StudyNotion – E-Learning Platform",
+    description:
+      "A feature-rich e-learning platform where instructors can create and manage courses, and students can securely purchase content and track progress in real time. Includes role-based access, payment flow, course progress tracking, and performance analytics to enhance the learning experience.",
     image: "/assets/project2.png",
     link: "https://studynotion-frontend.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "NotesVaaault",
-    description: " A full-featured web app to create, update, delete, search, and share pastes. Built with React, this project helped me master routing, dynamic navigation, and advanced React hooks like useEffect, useContext, and useReducer.",
+    description:
+      "A CRUD-based web application to create, update, delete, search, and share notes. Built with React to strengthen fundamentals such as routing, dynamic navigation, and advanced hooks including useEffect, useContext, and useReducer.",
     image: "/assets/project5.png",
     link: "http://notesvaault.netlify.app/"
   },
   {
-    id: 3,
-    title: "Blog App",
-    description: "BlogTopic App is a simple React app where users can explore blogs by topics. I’ve added clickable tags like #artificialintelligence, #frontend, etc. — and when the user clicks on a tag, they go to a page that shows only the blogs related to that topic.Also, I added pagination, so if there are many blogs under one topic, the user can go to next pages to read more.",
+    id: 4,
+    title: "BlogTopic App",
+    description:
+      "A topic-based blog exploration app where users browse content using clickable tags like #frontend and #artificialintelligence. Implements dynamic routing and pagination to efficiently handle large volumes of topic-specific blog content.",
     image: "/assets/project6.png",
     link: "https://blog-context-app-sigma.vercel.app/"
   },
   {
-    id: 4,
+    id: 5,
     title: "QuickPay",
-    description: "A payment application that enables users to securely log in and log out, send money to people in their contacts, and view a complete history of their transactions. It provides a smooth and intuitive interface for managing payments, ensuring users can handle transfers and track activity efficiently within a clean and user-friendly experience.",
+    description:
+      "A digital payment application that allows users to authenticate securely, transfer money to contacts, and view complete transaction history. Focuses on clean UI, secure flows, and intuitive user experience for managing payments.",
     image: "/assets/project9.png",
     link: "https://quiickkpay.netlify.app/"
   }
-];
 
+];
  const skills = [
     { id: 1, name: "JavaScript", icon: <FaJs size={50} /> },
     { id: 2, name: "React", icon: <FaReact size={50} /> },

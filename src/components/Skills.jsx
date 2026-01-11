@@ -25,7 +25,6 @@ export default function Skills() {
     { id: 10, name: "Prisma", icon: <SiPrisma  size={50}/>},
     { id: 11, name: "Mongoose", icon: <SiMongoose size={50}/>},
     { id: 12, name: "Hono", icon: <SiHono size={50}/>},
-    { id: 13, name: "Mongoose", icon: <SiMongoose size={50}/>},
     { id: 14, name: "Docker", icon: <SiDocker size={50}/>},
     { id: 15, name: "Next js", icon: <RiNextjsFill size={50}/>},
     { id: 16, name: "TypeScript", icon: <SiTypescript size={50}/>},
