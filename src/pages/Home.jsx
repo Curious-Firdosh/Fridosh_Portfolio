@@ -3,110 +3,110 @@ import { motion } from "framer-motion";
 import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
-import { TypeAnimation } from "react-type-animation";
+import { FiArrowRight } from "react-icons/fi";
 
+const SOCIAL_LINKS = [
+  { id: 'github', icon: <BsGithub size={20} />, link: "https://github.com/Curious-Firdosh" },
+  { id: 'linkedin', icon: <IoLogoLinkedin size={20} />, link: "https://www.linkedin.com/in/firdoshkhan" },
+  { id: 'twitter', icon: <IoLogoTwitter size={20} />, link: "https://x.com/The_Firdosh" },
+  { id: 'email', icon: <BiLogoGmail size={20} />, link: "mailto:thefirdosh@gmail.com" }
+];
 
 export default function Home() {
+  
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-  const icons = [
-    { id: 1, icon: <BiLogoGmail size={30} />, link: "mailto:thefirdosh@gmail.com" },
-    { id: 2, icon: <IoLogoLinkedin size={30} />, link: "https://www.linkedin.com/in/firdoshkhan" },
-    { id: 3, icon: <IoLogoTwitter size={30} />, link: "https://x.com/The_Firdosh" },
-    { id: 4, icon: <BsGithub size={30} />, link: "https://github.com/Curious-Firdosh" }
-  ];
   return (
-    <div className="mt-20" id="home">
-      <div className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse">
+    <section className="relative min-h-screen flex items-center bg-white overflow-hidden pt-20" id="home">
+      
+      {/* Subtle Background Elements */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-zinc-50 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
+      <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8">
+
+        {/* Left Content */}
         <motion.div
-          className="lg:w-[45%]"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          className="w-full lg:w-5/12 z-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-
-          <motion.div
-            className="text-2xl lg:text-5xl flex flex-col mt-8 lg:mt-0 gap-2 lg:gap-5 text-nowrap"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { staggerChildren: 0.2, ease: "easeInOut" },
-              },
-            }}
+          {/* Status Badge */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 mb-8"
           >
-            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Hello, <TypeAnimation
-                sequence={[
-                  'I am Firdosh Khan',
-                  1000,
-                   'I am a Web Developer',
-                  1000,
-                  'I am a Software Developer',
-                  1000,
-                ]}
-                speed={10}
-                style={{ fontWeight:600 }}
-                repeat={Infinity}
-              />
-            </motion.h2>
-            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              <span className="font-extrabold">Fullstack</span>{" "}
-              <span
-                className="text-white font-extrabold"
-                style={{ WebkitTextStroke: "1px black" }}
-              >
-                Developer
-              </span>
-            </motion.h2>
-            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Based In <span className="font-extrabold">India.</span>
-            </motion.h2>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+            </span>
+            <span className="text-xs font-bold text-zinc-600 uppercase tracking-wide">Available for new opportunities</span>
           </motion.div>
 
-          <motion.p
-            className="text-[#71717A] text-sm lg:text-base mt-5"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            Passionate about technology, I specialize in Web Development and Web Designing. I’m focused on building innovative solutions and continuously expanding my skills. My goal is to grow as a developer and contribute to impactful projects in the tech industry.
-          </motion.p>
+          <div className="space-y-4">
+            <h1 className="text-5xl lg:text-7xl font-light tracking-tight text-zinc-900 leading-[1.1]">
+              Full Stack <br />
+              <span className="font-black text-blue-600">Engineer.</span>
+            </h1>
+          </div>
 
-          <motion.div
-            className="flex items-center gap-x-5 mt-10 lg:mt-14"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 1 }}
-          >
-            {icons.map(({icon, id ,link}) => (
-              <motion.a
-                key={id}
-                href={link}
-                className="bg-white p-2 lg:p-3 rounded border-2 border-black"
-                whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
-                whileTap={{ scale: 0.9 }}
-            
-              >
+          <p className="text-zinc-500 text-lg lg:text-xl mt-6 leading-relaxed max-w-lg">
+            I am <span className="font-semibold text-zinc-900">Firdosh Khan</span>. I architect and build scalable, production-ready applications using Next.js, Node.js, and PostgreSQL.
+          </p>
+
+          {/* CTA & Socials */}
+          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <button 
+              onClick={scrollToContact}
+              className="flex items-center gap-2 px-8 py-4 bg-zinc-900 text-white rounded-full font-semibold hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 group"
+            >
+              Let's Talk
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </button>
+
+            <div className="flex items-center gap-3">
+              {SOCIAL_LINKS.map(({ id, icon, link }) => (
+                <a
+                  key={id}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-zinc-200 text-zinc-500 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-300 shadow-sm hover:shadow-md"
+                >
                   {icon}
-                {/* <icon className="w-4 h-4 lg:w-5 lg:h-5" /> */}
-              </motion.a>
-            ))}
+                </a>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Right Content - Illustration */}
+        <motion.div
+          className="w-full lg:w-7/12 flex justify-center lg:justify-end z-10"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+        >
+          {/* Added a floating animation to make the static SVG feel alive */}
+          <motion.div
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            className="w-full max-w-[500px] lg:max-w-[700px]"
+          >
+            <img 
+              className="w-full h-auto drop-shadow-2xl" 
+              src="/assets/hero-vector.svg" 
+              alt="Development Illustration" 
+            />
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="lg:w-[55%] w-full"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        >
-          <img className="h-full w-full" src="/assets/hero-vector.svg" alt="Hero Vector" />
-        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
