@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import {  SiTypescript, SiDocker, SiHono, SiPrisma, SiExpress } from "react-icons/si";
+import { SiTypescript, SiDocker, SiHono, SiPrisma, SiExpress } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 const EXPERIENCE = [
@@ -46,14 +46,15 @@ const SKILLS = [
 
 export default function SkillsAndExperience() {
   return (
-    <section className="relative bg-zinc-50 py-32 px-6 lg:px-28 overflow-hidden text-zinc-900" id="experience">
-      {/* Subtle Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
-
-      <div className="relative max-w-6xl mx-auto space-y-32">
+    <>
+      {/* ================= EXPERIENCE SECTION ================= */}
+      {/* Notice this is now its own section with id="experience" */}
+      <section className="relative bg-zinc-50 py-32 px-6 lg:px-28 overflow-hidden text-zinc-900" id="experience">
         
-        {/* ================= EXPERIENCE SECTION ================= */}
-        <div>
+        {/* Subtle Background Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
+
+        <div className="relative max-w-6xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -109,9 +110,12 @@ export default function SkillsAndExperience() {
             ))}
           </div>
         </div>
+      </section>
 
-        {/* ================= SKILLS SECTION ================= */}
-        <div id="skills">
+      {/* ================= SKILLS SECTION ================= */}
+      {/* Notice this is now a PEER section with id="skills" */}
+      <section className="relative bg-zinc-50 pb-32 pt-16 px-6 lg:px-28 text-zinc-900" id="skills">
+        <div className="relative max-w-6xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -146,8 +150,7 @@ export default function SkillsAndExperience() {
             ))}
           </div>
         </div>
-        
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
