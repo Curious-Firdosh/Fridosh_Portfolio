@@ -1,23 +1,24 @@
-import React from 'react'
-import Home from './pages/Home'
-import Skills from './components/Skills'
-import Navbar from './components/Navbar'
-import About from './components/About'
-import Footer from './components/Footer'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import CustomCursor from './utils/CursorAnimation'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './components/About';
+import SkillsAndExperience from './components/Skills'; // Your merged component
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className='font-sora scroll-smooth overflow-x-hidden'>
-      <CustomCursor/>
+    <div className='font-sora scroll-smooth selection:bg-blue-600 selection:text-white bg-white text-zinc-900'>
       <Navbar />
-      <Home />
-      <Skills />
-      <About />
-      <Projects />
-      <Contact />
+      
+      <main>
+        <Home />
+        <SkillsAndExperience />
+        <About />
+        <Projects />
+        <Contact />
+      </main>
 
       <Footer />
     </div>
