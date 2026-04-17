@@ -3,17 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { TbDownload } from "react-icons/tb";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 
-
-
-
+const NAV_LINKS = ["about", "experience", "skills", "projects", "contact"];
 
 export default function Navbar() {
-  const [hasShadow, setHasShadow] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasShadow(window.scrollY > 0);
+      setHasScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,112 +22,152 @@ export default function Navbar() {
     const section = document.getElementById(id);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 110,
+        top: section.offsetTop - 100, 
         behavior: "smooth",
       });
     }
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; }
+  }, [isOpen]);
+
+  // Ensure this path exactly matches your public folder structure
+  const RESUME_URL = "/assets/FirdoshKhan.pdf";
+
   return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${hasShadow ? "shadow-md" : "shadow-none"
+    <>
+      <motion.nav
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          hasScrolled 
+            ? "bg-white/80 backdrop-blur-md border-b border-zinc-200/50 py-4 shadow-sm" 
+            : "bg-transparent py-6"
         }`}
-    >
-      <div className="container mx-auto flex justify-between items-center">
-   
-             <h2 className=" font-extrabold  text-4xl">Firdosh Khan</h2>
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+          
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex items-center gap-2 group"
+          >
+            <div className="w-8 h-8 bg-zinc-900 text-white rounded flex items-center justify-center font-bold text-lg group-hover:bg-blue-600 transition-colors">
+              F
+            </div>
+            <h2 className="font-bold text-xl tracking-tight text-zinc-900">
+              Firdosh<span className="text-zinc-400">Khan</span>
+            </h2>
+          </button>
 
-        <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
-          {["about", "skills", "projects", "contact"].map((section) => (
-            <motion.li
-              key={section}
-              className="group"
-              whileHover={{ scale: 1.1 }}
-            >
-              <button onClick={() => scrollToSection(section)}>
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
-              <motion.span
-                className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex"
-                layout
-              ></motion.span>
-            </motion.li>
-          ))}
-        </ul>
+          <ul className="hidden md:flex items-center gap-x-8">
+            {NAV_LINKS.map((section) => (
+              <li key={section}>
+                <button 
+                  onClick={() => scrollToSection(section)}
+                  className="text-sm font-medium text-zinc-500 hover:text-zinc-900 capitalize transition-colors relative group py-2"
+                >
+                  {section}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full rounded-full" />
+                </button>
+              </li>
+            ))}
+          </ul>
 
-        
-        <motion.a
-          href="/assets/FirdoshKhan.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden relative lg:inline-block px-4 py-2 font-medium group"
-        >
-          <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-          <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-          <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
-          Resume <TbDownload size={16} />
-          </span>
-        </motion.a>
-  
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-zinc-900 text-white text-sm font-semibold rounded-full hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+          >
+            Resume <TbDownload size={18} />
+          </a>
 
-        <motion.button
-          className="lg:hidden text-2xl"
-          onClick={() => setIsOpen(!isOpen)}
-          whileHover={{ scale: 1.2 }}
-        >
-          {isOpen ? <HiX /> : <HiOutlineMenu />}
-        </motion.button>
-      </div>
+          <button
+            className="md:hidden text-zinc-900 p-2 -mr-2"
+            onClick={() => setIsOpen(true)}
+            aria-label="Toggle menu"
+          >
+            <HiOutlineMenu size={24} />
+          </button>
 
-      {/* Mobile Menu */}
+        </div>
+      </motion.nav>
+
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ y: "-100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-100%" }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden fixed top-0 right-0 h-full w-full bg-white shadow"
-          >
-            <button
-              className="absolute top-5 right-5 text-2xl"
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-zinc-900/40 backdrop-blur-sm z-[60] md:hidden"
+            />
+
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-full w-[280px] bg-white z-[70] shadow-2xl flex flex-col md:hidden"
             >
-              <HiX />
-            </button>
-            <ul className="flex flex-col items-start ml-16 mt-28 h-full gap-y-6 font-semibold">
-              {["about", "skills", "projects", "contact"].map((section) => (
-                <motion.li
-                  key={section}
-                  className="border-b"
-                  whileHover={{ scale: 1.1 }}
+              <div className="flex justify-end p-6">
+                <button
+                  className="p-2 text-zinc-500 hover:text-zinc-900 bg-zinc-100 rounded-full transition-colors"
+                  onClick={() => setIsOpen(false)}
                 >
-                  <button onClick={() => scrollToSection(section)}>
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
-                  </button>
-                </motion.li>
-              ))}
-              <motion.a
-                href="/assets/FirdoshKhan.pdf"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                className="relative inline-block px-4 py-2 font-semibold group"
-                whileHover={{ scale: 1.1 }}
-              >
-                <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-                <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
-                  Resume <TbDownload size={16} />
-                </span>
-              </motion.a>
-            </ul>
-          </motion.div>
+                  <HiX size={20} />
+                </button>
+              </div>
+
+              <div className="flex-1 flex flex-col px-8 pt-8 gap-6 overflow-y-auto">
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Navigation</p>
+                <ul className="flex flex-col gap-y-4">
+                  {NAV_LINKS.map((section, idx) => (
+                    <motion.li
+                      key={section}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + (idx * 0.05) }}
+                    >
+                      <button 
+                        onClick={() => scrollToSection(section)}
+                        className="text-2xl font-light text-zinc-900 hover:text-blue-600 capitalize text-left w-full transition-colors"
+                      >
+                        {section}
+                      </button>
+                    </motion.li>
+                  ))}
+                </ul>
+
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="mt-8 pt-8 border-t border-zinc-100"
+                >
+                  <a
+                    href={RESUME_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full px-5 py-4 bg-zinc-900 text-white text-sm font-semibold rounded-xl hover:bg-blue-600 transition-colors"
+                  >
+                    View Resume <TbDownload size={18} />
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </>
   );
 }
