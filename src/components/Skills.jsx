@@ -5,27 +5,30 @@ import { SiTypescript, SiDocker, SiHono, SiPrisma, SiExpress } from "react-icons
 import { BiLogoPostgresql } from "react-icons/bi";
 
 const EXPERIENCE = [
+  // {
+  //   role: "Full Stack Developer",
+  //   company: "Encoder",
+  //   duration: "Jan 2025 — Mar 2026",
+  //   type: "Remote",
+  //   highlights: [
+  //     "Built and deployed full-stack applications using React, Next.js, Node.js, and PostgreSQL",
+  //     "Designed scalable REST APIs with JWT authentication and RBAC authorization",
+  //     "Integrated AI features using LLMs and LangChain with RAG pipelines",
+  //     "Deployed apps on Vercel, Render, and Railway with production-grade performance"
+  //   ]
+  // },
   {
-    role: "Full Stack Developer",
-    company: "Encoder",
-    duration: "Jan 2025 — Mar 2026",
-    type: "Remote",
-    highlights: [
-      "Built and deployed full-stack applications using React, Next.js, Node.js, and PostgreSQL",
-      "Designed scalable REST APIs with JWT authentication and RBAC authorization",
-      "Integrated AI features using LLMs and LangChain with RAG pipelines",
-      "Deployed apps on Vercel, Render, and Railway with production-grade performance"
-    ]
-  },
-  {
-    role: "Web Development Intern",
+    role: "MERN Stack Developer Intern",
     company: "Cognifyz Technologies",
     duration: "Apr 2025 — May 2025",
     type: "Remote",
     highlights: [
-      "Implemented secure authentication systems using JWT and RBAC",
-      "Developed REST APIs connecting frontend and backend services",
-      "Built responsive UI with React and Tailwind CSS"
+      "Built and deployed full-stack web applications using MongoDB, Express.js, React, and Node.js (MERN stack)",
+      "Designed and implemented secure authentication & authorization using JWT and Role-Based Access Control (RBAC)",
+      "Developed scalable RESTful APIs and integrated them with dynamic React frontends",
+      "Optimized application performance by improving API response times and reducing unnecessary re-renders",
+      "Created reusable UI components using React and Tailwind CSS, ensuring responsive design across devices",
+      "Collaborated on debugging, testing, and improving code quality using Git and modern development practices"
     ]
   }
 ];
@@ -50,12 +53,12 @@ export default function SkillsAndExperience() {
       {/* ================= EXPERIENCE SECTION ================= */}
       {/* Notice this is now its own section with id="experience" */}
       <section className="relative bg-zinc-50 py-32 px-6 lg:px-28 overflow-hidden text-zinc-900" id="experience">
-        
+
         {/* Subtle Background Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
 
         <div className="relative max-w-6xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -71,7 +74,7 @@ export default function SkillsAndExperience() {
 
           <div className="relative border-l border-zinc-200 ml-4 lg:ml-8 space-y-16">
             {EXPERIENCE.map((exp, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="relative pl-8 lg:pl-16 group"
                 initial={{ opacity: 0, x: -20 }}
@@ -116,7 +119,7 @@ export default function SkillsAndExperience() {
       {/* Notice this is now a PEER section with id="skills" */}
       <section className="relative bg-zinc-50 pb-32 pt-16 px-6 lg:px-28 text-zinc-900" id="skills">
         <div className="relative max-w-6xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -153,4 +156,4 @@ export default function SkillsAndExperience() {
       </section>
     </>
   );
-}
+} 
