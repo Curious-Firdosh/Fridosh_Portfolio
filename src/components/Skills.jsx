@@ -1,150 +1,403 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaDatabase,
+  FaRobot,
+  FaGitAlt,
+  FaLink,
+  FaSearch,
+} from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript, SiDocker, SiHono, SiPrisma, SiExpress, SiMongodb } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
+import {
+  SiTypescript,
+  SiDocker,
+  SiHono,
+  SiPrisma,
+  SiExpress,
+  SiMongodb,
+  SiFastapi,
+  SiPostgresql,
+  SiOpenai,
+  SiN8N,
+  SiRedis,
+} from "react-icons/si";
+import { TbArrowUpRight, TbBriefcase2, TbSparkles } from "react-icons/tb";
 
 const EXPERIENCE = [
-  // {
-  //   role: "Full Stack Developer",
-  //   company: "Encoder",
-  //   duration: "Jan 2025 — Mar 2026",
-  //   type: "Remote",
-  //   // EXPLICIT TECH STACK
-  //   tech: ["Next.js", "React", "Node.js", "Express", "PostgreSQL", "Tailwind"],
-  //   highlights: [
-  //     "Built end-to-end full-stack features, handling both frontend (React/Next.js) and backend (Node.js, APIs) to deliver complete user-facing functionality",
-  //     "Designed and implemented secure authentication and role-based access systems using JWT, ensuring controlled access across different user types",
-  //     "Integrated AI-driven features using LLM APIs and LangChain to automate workflows and enhance user experience",
-  //     "Deployed and managed applications on Vercel and Railway, handling environment setup, builds, and production issues"
-  //   ]
-  // },
   {
-    role: "MERN Stack Developer Intern",
-    company: "Cognifyz Technologies",
-    duration: "Apr 2025 — May 2025",
+    role: "Full Stack Developer",
+    company: "Encoder",
+    duration: "Jan 2025 — Mar 2026",
     type: "Remote",
-    // EXPLICIT TECH STACK
-    tech: ["MongoDB", "Express", "React", "Node.js", "Tailwind"],
+    tech: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
     highlights: [
-      "Built and implemented secure authentication and role-based access systems using JWT, enabling controlled user access across the application",
-      "Developed and integrated RESTful APIs with React-based frontends to deliver dynamic, data-driven user experiences",
-      "Improved frontend performance by identifying and eliminating unnecessary re-renders in complex component state flows",
-      "Actively contributed to debugging, testing, and refactoring code to enhance stability and maintainability of the application"
-    ]
-  }
+      "Developed end-to-end web application features across React/Next.js frontends and Node.js backend services.",
+      "Implemented JWT-based authentication and role-based access control for protected application resources.",
+      "Integrated LLM APIs and AI-related workflows into application features.",
+      "Deployed applications using Vercel and Railway, troubleshooting environment configuration, build failures, and runtime issues.",
+    ],
+  },
+  {
+    role: "Freelance Full Stack Developer",
+    company: "Independent Freelance Work",
+    duration: "Jul 2024 — Present",
+    type: "Freelance / Remote",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "MongoDB",
+      "Prisma",
+      "Tailwind CSS",
+      "n8n",
+    ],
+    highlights: [
+      "Developed and delivered client websites and web applications across logistics, cargo, finance, and e-commerce domains.",
+      "Built responsive frontend interfaces and backend APIs using Next.js, React, Node.js, and TypeScript.",
+      "Implemented database integrations, product management workflows, and third-party API integrations based on client requirements.",
+      "Configured n8n automation workflows to streamline repetitive business processes and connect external services.",
+      "Managed project delivery from requirement gathering and development through testing, deployment, and ongoing maintenance.",
+    ],
+  },
 ];
 
-const SKILLS = [
-  { name: "Next.js", icon: <RiNextjsFill size={32} /> },
-  { name: "TypeScript", icon: <SiTypescript size={32} /> },
-  { name: "React", icon: <FaReact size={32} /> },
-  { name: "Node.js", icon: <FaNodeJs size={32} /> },
-  { name: "PostgreSQL", icon: <BiLogoPostgresql size={32} /> },
-  { name: "MongoDB", icon: <SiMongodb size={32} /> },
-  { name: "Prisma", icon: <SiPrisma size={32} /> },
-  { name: "Hono", icon: <SiHono size={32} /> },
-  { name: "Docker", icon: <SiDocker size={32} /> },
-  { name: "Tailwind", icon: <RiTailwindCssFill size={32} /> },
-  { name: "Express", icon: <SiExpress size={32} /> },
+const SKILL_GROUPS = [
+  {
+    title: "Full-Stack Development",
+    description: "From responsive interfaces to backend APIs.",
+    icon: <FaReact />,
+    skills: [
+      { name: "Next.js", icon: <RiNextjsFill /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Express.js", icon: <SiExpress /> },
+      { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
+      { name: "REST APIs", icon: <FaLink /> },
+    ],
+  },
+  {
+    title: "AI Engineering",
+    description: "Integrating LLMs into practical applications.",
+    icon: <FaRobot />,
+    skills: [
+      { name: "Python", icon: <FaPython /> },
+      { name: "FastAPI", icon: <SiFastapi /> },
+      { name: "LLM APIs", icon: <SiOpenai /> },
+      { name: "RAG", icon: <FaRobot /> },
+      { name: "Embeddings", icon: <FaDatabase /> },
+      { name: "Semantic Search", icon: <FaSearch /> },
+    ],
+  },
+  {
+    title: "Data & Retrieval",
+    description: "Data modeling, storage, and retrieval systems.",
+    icon: <FaDatabase />,
+    skills: [
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Prisma ORM", icon: <SiPrisma /> },
+      { name: "pgvector", icon: <FaDatabase /> },
+      { name: "Redis", icon: <SiRedis /> },
+    ],
+  },
+  {
+    title: "Infrastructure & Automation",
+    description: "Deployment tools and workflow automation.",
+    icon: <FaGitAlt />,
+    skills: [
+      { name: "Docker", icon: <SiDocker /> },
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "Hono", icon: <SiHono /> },
+      { name: "n8n", icon: <SiN8N /> },
+    ],
+  },
 ];
+
+const reveal = {
+  hidden: { opacity: 0, y: 22 },
+  visible: { opacity: 1, y: 0 },
+};
+
+function SectionHeading({ eyebrow, title, accent, description }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={reveal}
+      transition={{ duration: 0.55 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="mb-12 max-w-3xl sm:mb-16"
+    >
+      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-blue-700 shadow-sm">
+        <TbSparkles size={16} />
+        {eyebrow}
+      </div>
+
+      <h2 className="text-4xl font-medium leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+        {title}{" "}
+        <span className="bg-gradient-to-r from-blue-700 via-indigo-600 to-violet-600 bg-clip-text font-extrabold text-transparent">
+          {accent}
+        </span>
+      </h2>
+
+      <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+        {description}
+      </p>
+    </motion.div>
+  );
+}
+
+function ExperienceCard({ exp, index }) {
+  return (
+    <motion.article
+      initial="hidden"
+      whileInView="visible"
+      variants={reveal}
+      transition={{ duration: 0.55, delay: index * 0.1 }}
+      viewport={{ once: true, amount: 0.12 }}
+      className="group relative pl-7 sm:pl-10 lg:pl-12"
+    >
+      {/* Timeline */}
+      <span className="absolute bottom-0 left-0 top-8 w-px bg-gradient-to-b from-blue-500 via-blue-200 to-transparent" />
+
+      <span className="absolute left-[-5px] top-8 h-[11px] w-[11px] rounded-full border-2 border-blue-600 bg-white ring-4 ring-blue-100 transition-transform duration-300 group-hover:scale-125" />
+
+      <div className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-900/[0.05] sm:p-7 lg:p-9">
+        <div
+          aria-hidden="true"
+          className="absolute right-0 top-0 h-32 w-32 rounded-full bg-blue-100/40 blur-3xl transition-opacity group-hover:opacity-100"
+        />
+
+        <div className="relative">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-100 text-blue-700">
+                <TbBriefcase2 size={24} />
+              </div>
+
+              <div>
+                <h3 className="text-xl font-extrabold tracking-tight text-slate-950 sm:text-2xl">
+                  {exp.role}
+                </h3>
+
+                <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
+                  <span className="font-bold text-blue-700">
+                    {exp.company}
+                  </span>
+                  <span className="h-1 w-1 rounded-full bg-slate-300" />
+                  <span className="text-slate-500">{exp.type}</span>
+                </div>
+              </div>
+            </div>
+
+            <span className="w-fit rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-600">
+              {exp.duration}
+            </span>
+          </div>
+
+          <div className="my-6 h-px bg-slate-100" />
+
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+            Technologies used
+          </p>
+
+          <div className="mb-7 flex flex-wrap gap-2">
+            {exp.tech.map((technology) => (
+              <span
+                key={technology}
+                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-600 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+              >
+                {technology}
+              </span>
+            ))}
+          </div>
+
+          <h4 className="mb-4 text-sm font-bold text-slate-900">
+            Key responsibilities & contributions
+          </h4>
+
+          <ul className="space-y-3">
+            {exp.highlights.map((point) => (
+              <li
+                key={point}
+                className="flex items-start gap-3 text-sm leading-7 text-slate-600 sm:text-base"
+              >
+                <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </motion.article>
+  );
+}
+
+function SkillGroup({ group, index }) {
+  return (
+    <motion.article
+      variants={reveal}
+      className="group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-900/[0.05] sm:p-7"
+    >
+      <div
+        aria-hidden="true"
+        className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-blue-100/40 blur-3xl transition-colors group-hover:bg-indigo-100/60"
+      />
+
+      <div className="relative">
+        <div className="mb-5 flex items-start justify-between gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-blue-700 transition-transform duration-300 group-hover:scale-105">
+            <span className="text-xl">{group.icon}</span>
+          </div>
+
+          <span className="text-sm font-bold tracking-widest text-slate-300">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        </div>
+
+        <h3 className="text-lg font-extrabold tracking-tight text-slate-950 sm:text-xl">
+          {group.title}
+        </h3>
+
+        <p className="mt-2 min-h-12 text-sm leading-6 text-slate-500">
+          {group.description}
+        </p>
+
+        <div className="my-5 h-px bg-slate-100" />
+
+        <div className="flex flex-wrap gap-2">
+          {group.skills.map((skill) => (
+            <div
+              key={skill.name}
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-200/80 bg-slate-50 px-3 py-2.5 text-xs font-semibold text-slate-600 transition-all duration-200 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 sm:text-sm"
+              title={skill.name}
+            >
+              <span className="text-base text-blue-600">{skill.icon}</span>
+              {skill.name}
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.article>
+  );
+}
 
 export default function SkillsAndExperience() {
   return (
     <>
-      {/* ================= EXPERIENCE SECTION ================= */}
-      <section className="relative bg-zinc-50 py-32 px-6 lg:px-28 overflow-hidden text-zinc-900" id="experience">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
+      {/* EXPERIENCE */}
+      <section
+        id="experience"
+        className="relative isolate overflow-hidden border-t border-slate-200/80 bg-white px-5 py-20 text-slate-900 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[400px] w-full max-w-5xl -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.10),transparent_65%)]"
+        />
 
-        <div className="relative max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16 max-w-2xl"
-          >
-            <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
-              Work <span className="font-black text-blue-600">Experience</span>
-            </h2>
-          </motion.div>
+        <div className="mx-auto max-w-6xl">
+          <SectionHeading
+            eyebrow="Professional Journey"
+            title="Experience that"
+            accent="builds."
+            description="My professional journey across full-stack development, backend engineering, integrations, and practical AI-powered features."
+          />
 
-          <div className="relative border-l border-zinc-200 ml-4 lg:ml-8 space-y-16">
+          <div className="space-y-8 sm:space-y-10">
             {EXPERIENCE.map((exp, index) => (
-              <motion.div
-                key={index}
-                className="relative pl-8 lg:pl-16 group"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <div className="absolute -left-[9px] top-2 h-4 w-4 rounded-full border-[3px] border-zinc-50 bg-blue-600 group-hover:scale-125 transition-all duration-300" />
-
-                <div className="bg-white border border-zinc-200/60 p-8 lg:p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500">
-                  <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
-                    <div>
-                      <h3 className="text-2xl font-bold tracking-tight text-zinc-900">{exp.role}</h3>
-                      <p className="text-blue-600 font-semibold mt-1 flex items-center gap-2">
-                        {exp.company}
-                        <span className="w-1 h-1 rounded-full bg-zinc-300" />
-                        <span className="text-zinc-500 font-medium text-sm">{exp.type}</span>
-                      </p>
-                    </div>
-                    <span className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-bold text-zinc-600">
-                      {exp.duration}
-                    </span>
-                  </div>
-
-                  {/* TECH STACK CHIPS */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {exp.tech.map((t) => (
-                      <span key={t} className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-md border border-blue-100">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <ul className="space-y-4">
-                    {exp.highlights.map((point, i) => (
-                      <li key={i} className="flex items-start gap-4 text-zinc-600 text-sm lg:text-base leading-relaxed">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-500/50 flex-shrink-0" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
+              <ExperienceCard
+                key={`${exp.company}-${exp.role}`}
+                exp={exp}
+                index={index}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= SKILLS SECTION ================= */}
-      <section className="relative bg-zinc-50 pb-32 pt-16 px-6 lg:px-28 text-zinc-900" id="skills">
-        <div className="relative max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-light tracking-tight mb-16">
-            Core <span className="font-black text-blue-600">Technologies</span>
-          </h2>
+      {/* SKILLS */}
+      <section
+        id="skills"
+        className="relative isolate overflow-hidden border-t border-slate-200/80 bg-[#f8fafc] px-5 py-20 text-slate-900 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-0 top-0 -z-10 h-96 w-96 rounded-full bg-blue-200/30 blur-[100px]"
+        />
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
-            {SKILLS.map((skill, index) => (
-              <motion.div
-                key={index}
-                className="group relative flex flex-col items-center justify-center p-8 bg-white border border-zinc-200/60 rounded-3xl hover:bg-zinc-900 hover:border-zinc-900 transition-all duration-500 cursor-default shadow-sm hover:shadow-xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05, duration: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-zinc-400 group-hover:text-white transition-colors duration-500 group-hover:-translate-y-1 transform">
-                  {skill.icon}
-                </div>
-                <p className="mt-4 font-bold text-sm tracking-tight text-zinc-700 group-hover:text-white transition-colors duration-500">
-                  {skill.name}
-                </p>
-              </motion.div>
+        <div className="mx-auto max-w-6xl">
+          <SectionHeading
+            eyebrow="Technical Expertise"
+            title="Tools I use to"
+            accent="build."
+            description="A practical toolkit spanning frontend and backend development, AI integration, data systems, and automation."
+          />
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.1 },
+              },
+            }}
+            viewport={{ once: true, amount: 0.05 }}
+            className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6"
+          >
+            {SKILL_GROUPS.map((group, index) => (
+              <SkillGroup
+                key={group.title}
+                group={group}
+                index={index}
+              />
             ))}
-          </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={reveal}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-8 flex flex-col gap-4 rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:flex-row sm:items-center sm:p-7"
+          >
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
+              <TbSparkles size={23} />
+            </div>
+
+            <div>
+              <h3 className="font-bold text-slate-950">
+                Engineering focus
+              </h3>
+              <p className="mt-1 text-sm leading-7 text-slate-600 sm:text-base">
+                Combining solid software engineering fundamentals with
+                practical AI integration to build useful, maintainable
+                applications.
+              </p>
+            </div>
+
+            <a
+              href="#projects"
+              className="inline-flex min-h-11 shrink-0 items-center gap-2 text-sm font-bold text-blue-700 transition-colors hover:text-blue-900 sm:ml-auto"
+            >
+              Explore projects
+              <TbArrowUpRight size={19} />
+            </a>
+          </motion.div>
         </div>
       </section>
     </>
