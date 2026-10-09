@@ -39,7 +39,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   // Ensure this path exactly matches your public folder structure
-  const RESUME_URL = "/assets/FirdoshKhan.pdf";
+  const RESUME_URL = "/assets/Firdosh_Khan_Resume.pdf";
 
   return (
     <>
